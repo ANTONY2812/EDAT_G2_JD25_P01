@@ -39,10 +39,10 @@
             Femenino = new RadioButton();
             Grupo = new Label();
             comboBox1 = new ComboBox();
-            Sueldo = new Label();
-            Sueldo1 = new TextBox();
             Seguro = new CheckBox();
             Datos = new Button();
+            sueldo11 = new Label();
+            sueldo1 = new TextBox();
             SuspendLayout();
             // 
             // Datos1
@@ -52,8 +52,7 @@
             Datos1.Name = "Datos1";
             Datos1.Size = new Size(109, 15);
             Datos1.TabIndex = 0;
-            Datos1.Text = "Datos de Empleado";
-            Datos1.Click += label1_Click;
+            Datos1.Text = "Datos de empleado";
             // 
             // Num
             // 
@@ -95,13 +94,12 @@
             FechaNacimiento.Size = new Size(103, 15);
             FechaNacimiento.TabIndex = 7;
             FechaNacimiento.Text = "Fecha Nacimiento";
-            FechaNacimiento.Click += label1_Click_1;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Location = new Point(169, 139);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(232, 23);
             dateTimePicker1.TabIndex = 8;
             // 
             // Masculino
@@ -143,22 +141,6 @@
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 12;
             // 
-            // Sueldo
-            // 
-            Sueldo.AutoSize = true;
-            Sueldo.Location = new Point(38, 294);
-            Sueldo.Name = "Sueldo";
-            Sueldo.Size = new Size(43, 15);
-            Sueldo.TabIndex = 13;
-            Sueldo.Text = "Sueldo";
-            // 
-            // Sueldo1
-            // 
-            Sueldo1.Location = new Point(87, 286);
-            Sueldo1.Name = "Sueldo1";
-            Sueldo1.Size = new Size(100, 23);
-            Sueldo1.TabIndex = 14;
-            // 
             // Seguro
             // 
             Seguro.AutoSize = true;
@@ -176,17 +158,34 @@
             Datos.Size = new Size(417, 46);
             Datos.TabIndex = 16;
             Datos.Text = "Generar datos aleaorios";
-            Datos.UseVisualStyleBackColor = true;
+            Datos.Click += Datos_Click;
+            // 
+            // sueldo11
+            // 
+            sueldo11.AutoSize = true;
+            sueldo11.Location = new Point(35, 289);
+            sueldo11.Name = "sueldo11";
+            sueldo11.Size = new Size(43, 15);
+            sueldo11.TabIndex = 17;
+            sueldo11.Text = "Sueldo";
+            sueldo11.Click += sueldo11_Click;
+            // 
+            // sueldo1
+            // 
+            sueldo1.Location = new Point(114, 289);
+            sueldo1.Name = "sueldo1";
+            sueldo1.Size = new Size(100, 23);
+            sueldo1.TabIndex = 18;
             // 
             // frmDatosAleatorios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(sueldo1);
+            Controls.Add(sueldo11);
             Controls.Add(Datos);
             Controls.Add(Seguro);
-            Controls.Add(Sueldo1);
-            Controls.Add(Sueldo);
             Controls.Add(comboBox1);
             Controls.Add(Grupo);
             Controls.Add(Femenino);
@@ -217,9 +216,10 @@
         private RadioButton Femenino;
         private Label Grupo;
         private ComboBox comboBox1;
-        private Label Sueldo;
         private TextBox Sueldo1;
         private CheckBox Seguro;
         private Button Datos;
+        private Label sueldo11;
+        private TextBox sueldo1;
     }
 }
